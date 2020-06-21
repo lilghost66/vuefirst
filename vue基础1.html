@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="vieport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        ul.a {list-style-type:circle;}
+    </style>
+</head>
+<body>
+<div id="app">
+    {{ message }}
+    {{ school.name }}
+    <ul class="a">
+        <li>
+            {{ campu[0] }}
+        </li>
+        <li>
+            {{ campu[1] }}
+        </li>
+    </ul>
+</div>
+
+<!-- 开发环境版本，包含了有帮助的命令行警告 -->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    var app = new Vue({
+            el: "#app",
+            data: {
+                message : "Hello Vue!",
+                school:{
+                    name:"小鬼",
+                    height:"178"
+                },
+                campu:["别叫我达芬奇","come back","Good night"]
+            }
+        })
+</script>
+</body>
+</html>
